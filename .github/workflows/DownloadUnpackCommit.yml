@@ -72,7 +72,7 @@ jobs:
           $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
           $headers.Add("Authorization", "Bearer $spnToken")
           $headers.Add("Content-Type", "application/json")
-          dir
+          lst
 
  # Unpack the solution
       - name: unpack solution
