@@ -71,6 +71,11 @@ jobs:
             $bytes = [Convert]::FromBase64String($response.value)
             [IO.File]::WriteAllBytes("${{ github.event.inputs.solution_name }}.zip", $bytes)
 
+      # Check Directory and Path
+      - name: Check DIR and Path
+        run: pwd
+          ls -al
+
       # Unpack the solution
       - name: unpack solution
         uses: microsoft/powerplatform-actions/unpack-solution@v0
