@@ -53,6 +53,8 @@ jobs:
           $url = "${{ github.event.inputs.artifact_url }}"
           $options = [System.StringSplitOptions]::RemoveEmptyEntries
           $dataverseHost = $url.Split("://", $options)[1].Split("/")[0]
+          echo $aadHost
+          echo $url
 
           $body = @{
             client_id     = $env:CLIENT_ID
