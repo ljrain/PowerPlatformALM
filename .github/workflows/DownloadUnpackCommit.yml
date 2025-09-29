@@ -76,3 +76,33 @@ jobs:
           $headers.Add("Authorization", "Bearer $spnToken")
           $headers.Add("Content-Type", "application/json")
 
+ # Unpack the solution
+      - name: unpack solution
+        uses: microsoft/powerplatform-actions/unpack-solution@v0
+        with:
+          solution-file: "${{ github.event.inputs.solution_name }}.zip"
+          solution-folder: "${{ github.event.repository.name }}"
+          solution-type: 'Both'
+          process-canvas-apps: false
+          overwrite-files: true
+
+      # Commit changes to the existing or new branch
+      - name: commit changes
+        shell: pwsh
+        run: |
+          rm -rf ${{ github.event.inputs.solution_name }}.zip
+          rm -rf ${{ github.event.inputs.solution_name }}_managed.zip
+          git config user.name ${{ github.event.inputs.user_name }}
+          git pull 
+          git add --all
+          git commit -am "${{ github.event.inputs.commit_message }}" --allow-empty
+
+      # Push the committed changes to the source branch
+      - name: push to branch
+        shell: pwsh
+        run: |
+          if('${{ github.event.inputs.target_branch }}' -ne '') {
+              git push origin ${{ github.event.inputs.target_branch }}
+          } else {
+              git push origin ${{ github.event.inputs.source_branch }}
+          }
