@@ -71,7 +71,7 @@ jobs:
             [IO.File]::WriteAllBytes("${{ github.event.inputs.solution_name }}_managed.zip", $bytes)
 
             # Download the unmanaged solution (for now we will need to use string manipulation to get the unmanaged solution URL, until the API provides this value)
-            $unmanaged_artifact_url = "${{ github.event.inputs.artifact_url }}".Replace("artifactfile", "artifactfileunmanaged")
+            $unmanaged_artifact_url = "${{ github.event.inputs.artifact_url }}" #.Replace("artifactfile", "artifactfileunmanaged")
             $response = Invoke-RestMethod "$unmanaged_artifact_url" -Method 'GET' -Headers $headers
             $bytes = [Convert]::FromBase64String($response.value)
             [IO.File]::WriteAllBytes("${{ github.event.inputs.solution_name }}.zip", $bytes)
