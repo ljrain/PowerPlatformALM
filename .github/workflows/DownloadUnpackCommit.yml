@@ -62,9 +62,11 @@ jobs:
             grant_type    = "client_credentials"
             scope         = "https://$dataverseHost/.default"
           }
-
+          echo $body
+          
           $OAuthReq = Invoke-RestMethod -Method Post -Uri "https://$aadHost/$env:TENANT_ID/oauth2/v2.0/token" -Body $body
           $spnToken = $OAuthReq.access_token
+          echo $spnToken
 
           $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
           $headers.Add("Authorization", "Bearer $spnToken")
