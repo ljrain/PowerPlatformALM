@@ -110,3 +110,6 @@ jobs:
           } else {
               git push origin ${{ github.event.inputs.source_branch }}
           }
+      - name: create pull request
+        shell: pwsh
+        run: gh pr create --base main --head branch1 --title "Your PR Title" --body "Description of the changes"
