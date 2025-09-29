@@ -48,7 +48,7 @@ jobs:
             CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
         shell: pwsh
         run: |
-            $aadHost = "login.microsoftonline.com"
+            $aadHost = "login.microsoftonline.us"
             $url = "${{ github.event.inputs.artifact_url }}"
             $options = [System.StringSplitOptions]::RemoveEmptyEntries
             $dataverseHost = $url.Split("://", $options)[1].Split("/")[0]
