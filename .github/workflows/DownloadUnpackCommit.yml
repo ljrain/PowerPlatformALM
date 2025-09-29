@@ -46,9 +46,9 @@ jobs:
             #CLIENT_ID: ${{secrets.CLIENT_ID}}   
             #TENANT_ID: ${{secrets.TENANT_ID}}   
             #CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
-            CLIENT_ID: 70dbbbb5-71bd-45d5-a23b-f23149d30c73
-            TENANT_ID: E0V8Q~DE~pv3cYS478qnt4RYBL6ogHO_QVRTpco3
-            CLIENT_SECRET: c0daba30-fba7-4669-a2fc-36142728b7e9
+            CLIENT_ID: "70dbbbb5-71bd-45d5-a23b-f23149d30c73"
+            TENANT_ID: "c0daba30-fba7-4669-a2fc-36142728b7e9"
+            CLIENT_SECRET: "E0V8Q~DE~pv3cYS478qnt4RYBL6ogHO_QVRTpco3"
             
         shell: pwsh
         run: |
