@@ -82,7 +82,7 @@ jobs:
         with:
           solution-file: "${{ github.event.inputs.solution_name }}.zip"
           solution-folder: "${{ github.event.repository.name }}"
-          solution-type: 'Both'
+          solution-type: 'Unmanaged'
           process-canvas-apps: false
           overwrite-files: true
 
