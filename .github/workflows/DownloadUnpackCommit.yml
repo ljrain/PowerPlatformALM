@@ -57,8 +57,6 @@ jobs:
           $url = "${{ github.event.inputs.artifact_url }}"
           $options = [System.StringSplitOptions]::RemoveEmptyEntries
           $dataverseHost = $url.Split("://", $options)[1].Split("/")[0]
-          echo $aadHost
-          echo $url
 
           $body = @{
             client_id     = $env:CLIENT_ID
@@ -70,11 +68,11 @@ jobs:
           
           $OAuthReq = Invoke-RestMethod -Method Post -Uri "https://$aadHost/$env:TENANT_ID/oauth2/v2.0/token" -Body $body
           $spnToken = $OAuthReq.access_token
-          echo $spnToken
 
           $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
           $headers.Add("Authorization", "Bearer $spnToken")
           $headers.Add("Content-Type", "application/json")
+          dir
 
  # Unpack the solution
       - name: unpack solution
