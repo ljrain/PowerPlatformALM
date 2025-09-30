@@ -6,7 +6,7 @@
       <LocalizedName description="ALM Test" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.8</Version>
+    <Version>1.0.0.9</Version>
     <Managed>2</Managed>
     <Publisher>
       <UniqueName>LouMSFT</UniqueName>
@@ -82,6 +82,7 @@
       <RootComponent type="1" schemaName="ljr_location" behavior="0" />
       <RootComponent type="62" schemaName="ljr_SampleApp" behavior="0" />
       <RootComponent type="80" schemaName="ljr_SampleApp" behavior="0" />
+      <RootComponent type="9" schemaName="ljr_officecode" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
