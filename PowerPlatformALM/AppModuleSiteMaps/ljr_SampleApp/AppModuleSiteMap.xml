@@ -12,6 +12,7 @@
       </Titles>
       <Group Id="group_550c2212" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
         <SubArea Id="subarea_81aca718" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ljr_employees" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_4b11491e" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ljr_location" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
       </Group>
     </Area>
   </SiteMap>

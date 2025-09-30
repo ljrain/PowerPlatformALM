@@ -11,6 +11,7 @@
   <NavigationType>0</NavigationType>
   <AppModuleComponents>
     <AppModuleComponent type="1" schemaName="ljr_employees" />
+    <AppModuleComponent type="1" schemaName="ljr_location" />
     <AppModuleComponent type="62" schemaName="ljr_SampleApp" />
   </AppModuleComponents>
   <AppModuleRoleMaps>
