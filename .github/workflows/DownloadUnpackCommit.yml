@@ -28,7 +28,7 @@ permissions:
 
 jobs:
   export-unpack-commit:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -89,7 +89,6 @@ jobs:
           solution-file: "${{ github.event.inputs.solution_name }}.zip"
           solution-folder: "${{ github.event.repository.name }}"
           solution-type: 'Both'
-          process-canvas-apps: false
           overwrite-files: true
 
       - name: Commit changes
