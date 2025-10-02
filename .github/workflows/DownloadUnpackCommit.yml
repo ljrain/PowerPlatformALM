@@ -96,3 +96,8 @@ jobs:
           git pull
           git add --all
 
+      - name: Push new branch to GitHub
+        shell: pwsh
+        run: |
+          git push origin ${{ github.event.inputs.target_branch }}          
+
